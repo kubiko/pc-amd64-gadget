@@ -1,4 +1,4 @@
-name: pc
+name: pc-ondra
 version: '16.04-0.9'
 type: gadget
 summary: PC gadget for generic devices
@@ -23,3 +23,9 @@ parts:
     plugin: make
     after: [grub-prepare]
 
+slots:
+    aeon-z-wave-g5:
+        interface: serial-port
+        path: /dev/serial-port-zwave
+        usb-vendor: 0x0658
+        usb-product: 0x0200
